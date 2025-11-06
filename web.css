@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9e9e9;
+  font-family: "Josefin Sans", sans-serif;
+  color: #14181d;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: "Protest Guerrilla", sans-serif;
+  line-height: 1.2;
+}
+
+h1.title {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3.author-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  background-color: white;
+}
+
+.site-header {
+  background: #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.site-header .logo {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  margin-top: 20px; 
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #14181d;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+
+.main-blog-intro {
+  margin-bottom: 40px; 
+}
+
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+}
+
+.blog-post h2 {
+  margin-bottom: 0.75rem;
+}
+
+.blog-post p {
+  margin-bottom: 1.25rem;
+}
+
+
+.album-section {
+  background: white;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.album-section h2 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.album-grid {
+  display: grid;
+  gap: 50px;
+}
+
+.album-cover,
+.featured-album {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.featured-album {
+  display: none;
+}
+
+.small-albums img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+.author-section {
+  background: white;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.author-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-pic {
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  text-align: center;
+}
+
+
+.site-footer {
+  background: #14181d;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+
+
+
+@media (min-width: 360px) and (max-width: 540px) {
+  .site-header {
+    padding: 20px;
+  }
+
+  .content, .album-section, .author-section, .site-footer {
+    padding: 20px;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .small-albums {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .author-box {
+    gap: 20px;
+  }
+
+  .site-header nav ul {
+    gap: 50px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+
+  .site-header {
+    padding: 20px;
+  }
+
+  .content, .album-section, .author-section, .site-footer {
+    padding: 20px;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .small-albums {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .author-box {
+    gap: 20px;
+  }
+
+  .site-header nav ul {
+    gap: 70px;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+
+   .content {
+  background: white;
+  padding: 12px;
+  margin-top: 12px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 0px;
+ }
+
+  .site-header {
+    padding: 30px;
+  }
+
+  .content, .album-section, .author-section, .site-footer {
+    padding: 30px;
+  }
+
+  .album-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .small-albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .small-albums img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .featured-album {
+    display: none;
+  }
+
+  .author-box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .author-info {
+    text-align: left;
+    max-width: 60%;
+  }
+
+  .site-header nav ul {
+    gap: 140px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+ .content {
+  background: white;
+  padding: 12px;
+  margin-top: 12px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 0px;
+ }
+
+  .site-header {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .title-main {
+    font-size: 105px;
+    font-weight: 100;
+    line-height: 1;
+  }
+
+  .title-sub {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .site-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 20px;
+  }
+
+  .blog-posts {
+    flex-direction: row; 
+    gap: 30px;
+  }
+
+  .blog-post {
+    flex: 1;
+  }
+
+  h1.title {
+    font-size: 4.5rem;
+  }
+
+  .lead {
+    font-size: 1.5rem;
+  }
+
+  /* Album section */
+  .album-grid {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .featured-album {
+    display: block;
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .small-albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 50%;
+  }
+
+  .small-albums img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .author-section {
+    padding: 50px;
+  }
+
+  .author-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .author-pic {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  .author-info {
+    text-align: left;
+    flex: 1;
+    max-width: 750px;
+  }
+}
+
+
+
